@@ -66,4 +66,59 @@ class ProductRepositoryTest {
         assertEquals(product2.getProductId(), savedProduct.getProductId());
         assertFalse(productIterator.hasNext());
     }
+
+    @Test
+    void testEditProduct() {
+        Product product = new Product();
+        product.setProductName("Sampo Cap Bambang");
+        product.setProductQuantity(100);
+        productRepository.create(product);
+
+        Product updatedProduct = new Product();
+        updatedProduct.setProductId(product.getProductId());
+        updatedProduct.setProductName("Sampo Cap Usep");
+        updatedProduct.setProductQuantity(50);
+        Product result = productRepository.edit(updatedProduct);
+
+        assertNotNull(result);
+        assertEquals("Sampo Cap Usep", result.getProductName());
+        assertEquals(50, result.getProductQuantity());
+
+        Iterator<Product> productIterator = productRepository.findAll();
+        assertTrue(productIterator.hasNext());
+        Product savedProduct = productIterator.next();
+        assertEquals("Sampo Cap Usep", savedProduct.getProductName());
+        assertEquals(50, savedProduct.getProductQuantity());
+    }
+
+    @Test
+    void testEditProductIfNotFound() {
+        Product product = new Product();
+        product.setProductName("Sampo Cap Bambang");
+        product.setProductQuantity(10);
+        Product result = productRepository.edit(product);
+        assertNull(result);
+    }
+
+    @Test
+    void testDeleteProduct() {
+        Product product = new Product();
+        product.setProductName("Sampo Cap Bambang");
+        product.setProductQuantity(100);
+        productRepository.create(product);
+
+        Product deletedProduct = productRepository.delete(product.getProductId());
+        assertNotNull(deletedProduct);
+        assertEquals(product.getProductId(), deletedProduct.getProductId());
+
+        Iterator<Product> productIterator = productRepository.findAll();
+        assertFalse(productIterator.hasNext());
+    }
+
+    @Test
+    void testDeleteProductIfNotFound() {
+        UUID randomId = UUID.randomUUID();
+        Product result = productRepository.delete(randomId);
+        assertNull(result);
+    }
 }

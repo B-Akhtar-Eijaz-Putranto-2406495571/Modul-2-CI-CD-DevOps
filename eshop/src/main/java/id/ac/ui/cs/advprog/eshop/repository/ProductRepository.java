@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.UUID;
 
 @Repository
 public class ProductRepository {
@@ -20,7 +21,7 @@ public class ProductRepository {
         return productData.iterator();
     }
 
-    public Product findById(String id) {
+    public Product findById(UUID id) {
         for (Product product : productData) {
             if (product.getProductId().equals(id)) {
                 return product;

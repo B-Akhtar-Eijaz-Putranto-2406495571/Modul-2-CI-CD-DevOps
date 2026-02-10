@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="30360636-34df-46a5-87b9-fb3530af2e49" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eshop/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/eshop/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eshop/src/test/java/id/ac/ui/cs/advprog/eshop/model/ProductTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/eshop/src/test/java/id/ac/ui/cs/advprog/eshop/model/ProductTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eshop/src/test/java/id/ac/ui/cs/advprog/eshop/repository/ProductRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/eshop/src/test/java/id/ac/ui/cs/advprog/eshop/repository/ProductRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +89,7 @@
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
     "Gradle.Build eshop.executor": "Run",
+    "Gradle.HomePageFunctionalTest.executor": "Run",
     "Gradle.ProductRepositoryTest.executor": "Run",
     "Gradle.ProductTest.executor": "Run",
     "Gradle.ProductTest.testGetProductName.executor": "Run",
@@ -111,7 +115,31 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Spring Boot.EshopApplication">
+  <component name="RunManager" selected="Gradle.Tests in 'eshop.test'">
+    <configuration name="HomePageFunctionalTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/eshop" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;id.ac.ui.cs.advprog.eshop.functional.HomePageFunctionalTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="ProductRepositoryTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -206,21 +234,6 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="ProductTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="eshop.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="id.ac.ui.cs.advprog.eshop.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="id.ac.ui.cs.advprog.eshop.model" />
-      <option name="MAIN_CLASS_NAME" value="id.ac.ui.cs.advprog.eshop.model.ProductTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Modul-1-Coding-Standards" />
       <method v="2">
@@ -242,11 +255,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'eshop.test'" />
+        <item itemvalue="Gradle.HomePageFunctionalTest" />
         <item itemvalue="Gradle.ProductRepositoryTest" />
         <item itemvalue="Gradle.ProductTest.testGetProductName" />
-        <item itemvalue="Gradle.Tests in 'eshop.test'" />
         <item itemvalue="Gradle.ProductTest" />
-        <item itemvalue="JUnit.ProductTest" />
       </list>
     </recent_temporary>
   </component>

@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30360636-34df-46a5-87b9-fb3530af2e49" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eshop/src/main/java/id/ac/ui/cs/advprog/eshop/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/eshop/src/main/java/id/ac/ui/cs/advprog/eshop/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eshop/src/main/resources/templates/createProduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/eshop/src/main/resources/templates/createProduct.html" afterDir="false" />
-    </list>
+    <list default="true" id="30360636-34df-46a5-87b9-fb3530af2e49" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,38 +80,62 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Gradle.Build eshop.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.HomePageFunctionalTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.HomePageFunctionalTest.pageTitle_isCorrect.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ProductRepositoryTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ProductTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ProductTest.testGetProductName.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Tests in 'eshop.test'.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductTest.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Spring Boot.EshopApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/akhta/OneDrive/Documents/Semester 4/Adpro/Group Project/individual-preparation&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Gradle.Build eshop.executor": "Run",
+    "Gradle.HomePageFunctionalTest.executor": "Run",
+    "Gradle.HomePageFunctionalTest.pageTitle_isCorrect.executor": "Run",
+    "Gradle.ProductRepositoryTest.executor": "Run",
+    "Gradle.ProductTest.executor": "Run",
+    "Gradle.ProductTest.testGetProductName.executor": "Run",
+    "Gradle.Tests in 'eshop.test'.executor": "Run",
+    "JUnit.ProductTest.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.EshopApplication.executor": "Run",
+    "git-widget-placeholder": "functional-test",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/akhta/OneDrive/Documents/Semester 4/Adpro/Group Project/individual-preparation",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Gradle.HomePageFunctionalTest">
+}]]></component>
+  <component name="RunManager" selected="Gradle.CreateProductFunctionalTest.createProduct_isSuccessful">
+    <configuration name="CreateProductFunctionalTest.createProduct_isSuccessful" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/eshop" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;id.ac.ui.cs.advprog.eshop.functional.CreateProductFunctionalTest.createProduct_isSuccessful&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="HomePageFunctionalTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -188,30 +208,6 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="ProductTest.testGetProductName" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/eshop" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;id.ac.ui.cs.advprog.eshop.model.ProductTest.testGetProductName&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration name="Tests in 'eshop.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -255,11 +251,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CreateProductFunctionalTest.createProduct_isSuccessful" />
         <item itemvalue="Gradle.HomePageFunctionalTest" />
         <item itemvalue="Gradle.HomePageFunctionalTest.pageTitle_isCorrect" />
         <item itemvalue="Gradle.Tests in 'eshop.test'" />
         <item itemvalue="Gradle.ProductRepositoryTest" />
-        <item itemvalue="Gradle.ProductTest.testGetProductName" />
       </list>
     </recent_temporary>
   </component>
@@ -277,7 +273,7 @@
       <workItem from="1770742505995" duration="3702000" />
       <workItem from="1770779328523" duration="28000" />
       <workItem from="1770973900781" duration="32000" />
-      <workItem from="1770976801867" duration="1257000" />
+      <workItem from="1770976801867" duration="1879000" />
     </task>
     <servers />
   </component>

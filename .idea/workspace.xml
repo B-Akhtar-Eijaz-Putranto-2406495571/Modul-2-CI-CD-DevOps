@@ -31,6 +31,17 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="eshop" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="eshop" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="eshop" type="f1a62948:ProjectNode" />
                 <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
               </path>
               <path>
@@ -49,8 +60,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -84,12 +95,14 @@
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
     "Gradle.Build eshop.executor": "Run",
+    "Gradle.CreateProductFunctionalTest.createProduct_isSuccessful.executor": "Run",
     "Gradle.HomePageFunctionalTest.executor": "Run",
     "Gradle.HomePageFunctionalTest.pageTitle_isCorrect.executor": "Run",
     "Gradle.ProductRepositoryTest.executor": "Run",
     "Gradle.ProductTest.executor": "Run",
     "Gradle.ProductTest.testGetProductName.executor": "Run",
     "Gradle.Tests in 'eshop.test'.executor": "Run",
+    "Gradle.eshop [jacocoTestCoverageVerification].executor": "Run",
     "JUnit.ProductTest.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -98,10 +111,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.EshopApplication.executor": "Run",
-    "git-widget-placeholder": "functional-test",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/akhta/OneDrive/Documents/Semester 4/Adpro/Group Project/individual-preparation",
+    "last_opened_file_path": "C:/Users/akhta/OneDrive/Documents/Semester 4/Adpro/Module 01-2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -111,7 +124,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.CreateProductFunctionalTest.createProduct_isSuccessful">
+  <component name="RunManager" selected="Gradle.eshop [jacocoTestCoverageVerification]">
     <configuration name="CreateProductFunctionalTest.createProduct_isSuccessful" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -184,30 +197,6 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="ProductRepositoryTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/eshop" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;id.ac.ui.cs.advprog.eshop.repository.ProductRepositoryTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration name="Tests in 'eshop.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -228,6 +217,28 @@
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="eshop [jacocoTestCoverageVerification]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/eshop" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jacocoTestCoverageVerification" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
@@ -251,11 +262,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.eshop [jacocoTestCoverageVerification]" />
         <item itemvalue="Gradle.CreateProductFunctionalTest.createProduct_isSuccessful" />
         <item itemvalue="Gradle.HomePageFunctionalTest" />
         <item itemvalue="Gradle.HomePageFunctionalTest.pageTitle_isCorrect" />
         <item itemvalue="Gradle.Tests in 'eshop.test'" />
-        <item itemvalue="Gradle.ProductRepositoryTest" />
       </list>
     </recent_temporary>
   </component>
@@ -273,7 +284,7 @@
       <workItem from="1770742505995" duration="3702000" />
       <workItem from="1770779328523" duration="28000" />
       <workItem from="1770973900781" duration="32000" />
-      <workItem from="1770976801867" duration="1879000" />
+      <workItem from="1770976801867" duration="7020000" />
     </task>
     <servers />
   </component>

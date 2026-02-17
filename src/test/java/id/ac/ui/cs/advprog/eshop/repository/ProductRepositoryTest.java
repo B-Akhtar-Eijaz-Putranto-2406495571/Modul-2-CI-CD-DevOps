@@ -68,6 +68,36 @@ class ProductRepositoryTest {
     }
 
     @Test
+    void testFindByIdFound() {
+        Product product = new Product();
+        UUID productId = UUID.randomUUID();
+        product.setProductId(productId);
+        product.setProductName("Sampo Cap Bambang");
+        product.setProductQuantity(100);
+        productRepository.create(product);
+
+        Product foundProduct = productRepository.findById(productId);
+
+        assertNotNull(foundProduct);
+        assertEquals(productId, foundProduct.getProductId());
+        assertEquals("Sampo Cap Bambang", foundProduct.getProductName());
+    }
+
+    @Test
+    void testFindByIdNotFound() {
+        Product product = new Product();
+        product.setProductId(UUID.randomUUID());
+        product.setProductName("Sampo Cap Bambang");
+        product.setProductQuantity(100);
+        productRepository.create(product);
+
+        UUID randomId = UUID.randomUUID();
+        Product foundProduct = productRepository.findById(randomId);
+
+        assertNull(foundProduct);
+    }
+
+    @Test
     void testEditProduct() {
         Product product = new Product();
         product.setProductName("Sampo Cap Bambang");

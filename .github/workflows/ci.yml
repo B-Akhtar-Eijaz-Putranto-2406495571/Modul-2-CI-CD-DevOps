@@ -20,3 +20,4 @@ jobs:
           cache: "gradle"
       - name: Run unit tests
         run: ./gradlew test
+        working-directory: ./eshop

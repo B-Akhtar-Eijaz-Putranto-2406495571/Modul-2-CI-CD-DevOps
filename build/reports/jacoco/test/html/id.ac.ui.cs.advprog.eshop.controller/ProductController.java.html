@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ProductController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">eshop</a> &gt; <a href="index.source.html" class="el_package">id.ac.ui.cs.advprog.eshop.controller</a> &gt; <span class="el_source">ProductController.java</span></div><h1>ProductController.java</h1><pre class="source lang-java linenums">package id.ac.ui.cs.advprog.eshop.controller;
+
+import id.ac.ui.cs.advprog.eshop.model.Product;
+import id.ac.ui.cs.advprog.eshop.service.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.UUID;
+
+@Controller
+<span class="fc" id="L14">public class ProductController {</span>
+
+    @Autowired
+    private ProductService service;
+
+    @GetMapping(&quot;/&quot;)
+    public String index() {
+<span class="fc" id="L21">        return &quot;homePage&quot;;</span>
+    }
+
+    @GetMapping(&quot;/product/create&quot;)
+    public String createProductPage(Model model) {
+<span class="fc" id="L26">        Product product = new Product();</span>
+<span class="fc" id="L27">        model.addAttribute(&quot;product&quot;, product);</span>
+<span class="fc" id="L28">        return &quot;createProduct&quot;;</span>
+    }
+
+    @PostMapping(&quot;/product/create&quot;)
+    public String createProductPost(@ModelAttribute Product product, Model model) {
+<span class="fc" id="L33">        service.create(product);</span>
+<span class="fc" id="L34">        return &quot;redirect:list&quot;;</span>
+    }
+
+    @GetMapping(&quot;/product/list&quot;)
+    public String productListPage(Model model) {
+<span class="fc" id="L39">        List&lt;Product&gt; allProducts = service.findAll();</span>
+<span class="fc" id="L40">        model.addAttribute(&quot;products&quot;, allProducts);</span>
+<span class="fc" id="L41">        return &quot;productList&quot;;</span>
+    }
+
+    @GetMapping(&quot;/product/edit/{id}&quot;)
+    public String editProductPage(@PathVariable(&quot;id&quot;) UUID id, Model model) {
+<span class="fc" id="L46">        Product product = service.findById(id);</span>
+<span class="fc" id="L47">        model.addAttribute(&quot;product&quot;, product);</span>
+<span class="fc" id="L48">        return &quot;editProduct&quot;;</span>
+    }
+
+    @PostMapping(&quot;/product/edit&quot;)
+    public String editProductPost(@ModelAttribute Product product, Model model) {
+<span class="fc" id="L53">        service.edit(product);</span>
+<span class="fc" id="L54">        return &quot;redirect:list&quot;;</span>
+    }
+
+    @GetMapping(&quot;/product/delete/{id}&quot;)
+    public String deleteProduct(@PathVariable(&quot;id&quot;) UUID id) {
+<span class="fc" id="L59">        service.deleteProductById(id);</span>
+<span class="fc" id="L60">        return &quot;redirect:../list&quot;;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>

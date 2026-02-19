@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ProductServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">eshop</a> &gt; <a href="index.source.html" class="el_package">id.ac.ui.cs.advprog.eshop.service</a> &gt; <span class="el_source">ProductServiceImpl.java</span></div><h1>ProductServiceImpl.java</h1><pre class="source lang-java linenums">package id.ac.ui.cs.advprog.eshop.service;
+
+import id.ac.ui.cs.advprog.eshop.model.Product;
+import id.ac.ui.cs.advprog.eshop.repository.ProductRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.UUID;
+
+@Service
+<span class="fc" id="L14">public class ProductServiceImpl implements ProductService {</span>
+
+    @Autowired
+    private ProductRepository productRepository;
+
+    @Override
+    public Product create(Product product) {
+<span class="nc" id="L21">        productRepository.create(product);</span>
+<span class="nc" id="L22">        return product;</span>
+    }
+
+    @Override
+    public List&lt;Product&gt; findAll() {
+<span class="nc" id="L27">        Iterator&lt;Product&gt; productIterator = productRepository.findAll();</span>
+<span class="nc" id="L28">        List&lt;Product&gt; allProduct = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L29">        productIterator.forEachRemaining(allProduct::add);</span>
+<span class="nc" id="L30">        return allProduct;</span>
+    }
+
+    @Override
+    public Product findById(UUID productId) {
+<span class="nc" id="L35">        return productRepository.findById(productId);</span>
+    }
+
+    @Override
+    public void edit(Product product) {
+<span class="nc" id="L40">        productRepository.edit(product);</span>
+<span class="nc" id="L41">    }</span>
+
+    @Override
+    public void deleteProductById(UUID productId) {
+<span class="nc" id="L45">        productRepository.delete(productId);</span>
+<span class="nc" id="L46">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>

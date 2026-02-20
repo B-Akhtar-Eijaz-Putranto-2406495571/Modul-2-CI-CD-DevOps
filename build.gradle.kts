@@ -7,6 +7,7 @@ plugins {
     jacoco
     id("org.springframework.boot") version "4.0.2"
     id("io.spring.dependency-management") version "1.1.7"
+    id("org.sonarqube") version "7.1.0.6387"
 }
 
 group = "id.ac.ui.cs.advprog"
@@ -74,4 +75,11 @@ tasks.test {
 
 tasks.jacocoTestReport {
     dependsOn(tasks.test)
+}
+
+sonar {
+    properties {
+        property("sonar.projectKey", "B-Akhtar-Eijaz-Putranto-2406495571_Modul-2-CI-CD-DevOps")
+        property("sonar.organization", "b-akhtar-eijaz-putranto-2406495571")
+    }
 }

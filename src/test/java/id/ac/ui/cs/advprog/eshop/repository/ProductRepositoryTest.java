@@ -122,6 +122,26 @@ class ProductRepositoryTest {
     }
 
     @Test
+    void testEditProductAtSecondIndex() {
+        Product firstProduct = new Product();
+        firstProduct.setProductName("Sampo Cap Bambang");
+        productRepository.create(firstProduct);
+
+        Product secondProduct = new Product();
+        secondProduct.setProductName("Sampo Cap Adi");
+        productRepository.create(secondProduct);
+
+        Product updatedSecondProduct = new Product();
+        updatedSecondProduct.setProductId(secondProduct.getProductId());
+        updatedSecondProduct.setProductName("Sampo Cap Usep");
+
+        Product result = productRepository.edit(updatedSecondProduct);
+
+        assertNotNull(result);
+        assertEquals("Sampo Cap Usep", result.getProductName());
+    }
+
+    @Test
     void testEditProductIfNotFound() {
         Product product = new Product();
         product.setProductName("Sampo Cap Bambang");

@@ -75,11 +75,18 @@ tasks.test {
 
 tasks.jacocoTestReport {
     dependsOn(tasks.test)
+
+    reports {
+        xml.required.set(true)
+        csv.required.set(false)
+        html.required.set(true)
+    }
 }
 
 sonar {
     properties {
         property("sonar.projectKey", "B-Akhtar-Eijaz-Putranto-2406495571_Modul-2-CI-CD-DevOps")
         property("sonar.organization", "b-akhtar-eijaz-putranto-2406495571")
+        property("sonar.coverage.jacoco.xmlReportPaths", "build/reports/jacoco/test/jacocoTestReport.xml")
     }
 }

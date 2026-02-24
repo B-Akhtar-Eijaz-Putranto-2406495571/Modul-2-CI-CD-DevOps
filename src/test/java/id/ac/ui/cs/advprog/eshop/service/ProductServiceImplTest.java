@@ -23,13 +23,14 @@ class ProductServiceImplTest {
     @Mock
     private ProductRepository productRepository;
 
-    @InjectMocks
     private ProductServiceImpl productService;
 
     private Product product;
 
     @BeforeEach
     void setUp() {
+        productService = new ProductServiceImpl(productRepository);
+
         product = new Product();
         product.setProductId(UUID.randomUUID());
         product.setProductName("Sampo Cap Bambang");

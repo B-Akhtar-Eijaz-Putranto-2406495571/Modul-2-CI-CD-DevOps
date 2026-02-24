@@ -26,12 +26,13 @@ class ProductControllerTest {
     @Mock
     private ProductService productService;
 
-    @InjectMocks
     private ProductController productController;
 
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);
+
+        productController = new ProductController(productService);
         mockMvc = MockMvcBuilders.standaloneSetup(productController).build();
     }
 

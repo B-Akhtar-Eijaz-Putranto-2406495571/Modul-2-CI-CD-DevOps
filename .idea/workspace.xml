@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce7ae378-6595-4b0a-8f40-f9f3186a674f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/carList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/createCar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/editCar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/eshop/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/eshop/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/eshop/repository/CarRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/eshop/repository/CarRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +53,7 @@
       <list>
         <option value="GitHub Workflow" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -88,6 +93,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "Gradle.Build Modul-1-Coding-Standards.executor": "Run",
     "Gradle.ProductControllerTest.executor": "Run",
     "Gradle.Tests in 'eshop.test'.executor": "Coverage",
@@ -101,6 +107,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.EshopApplication.executor": "Run",
     "git-widget-placeholder": "before-solid",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/akhta/OneDrive/Documents/Semester 4/Adpro/Modul-1-Coding-Standards",
@@ -111,7 +118,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.Tests in 'eshop.test'">
+  <component name="RunManager" selected="Spring Boot.EshopApplication">
     <configuration name="ProductControllerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />

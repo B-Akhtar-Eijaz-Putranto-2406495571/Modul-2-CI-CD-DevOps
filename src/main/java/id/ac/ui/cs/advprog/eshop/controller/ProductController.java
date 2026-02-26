@@ -13,8 +13,11 @@ import java.util.UUID;
 
 @Controller
 public class ProductController {
-    @Autowired
-    private ProductService service;
+    private final ProductService service;
+
+    public ProductController(ProductService service) {
+        this.service = service;
+    }
 
     @GetMapping("/")
     public String index() {
@@ -66,6 +69,10 @@ public class ProductController {
 class CarController extends ProductController {
     @Autowired
     private CarServiceImpl carService;
+
+    public CarController(ProductService service) {
+        super(service);
+    }
 
     @GetMapping("/createCar")
     public String createCarPage(Model model) {

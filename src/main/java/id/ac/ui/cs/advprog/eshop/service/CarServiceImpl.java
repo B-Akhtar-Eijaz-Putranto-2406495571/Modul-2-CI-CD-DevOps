@@ -2,7 +2,6 @@ package id.ac.ui.cs.advprog.eshop.service;
 import id.ac.ui.cs.advprog.eshop.model.Car;
 import id.ac.ui.cs.advprog.eshop.repository.CarReadRepository;
 import id.ac.ui.cs.advprog.eshop.repository.CarWriteRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,11 +9,13 @@ import java.util.Iterator;
 
 @Service
 public class CarServiceImpl implements CarReadService, CarWriteService {
-    @Autowired
-    private CarReadRepository carReadRepository;
+    private final CarReadRepository carReadRepository;
+    private final CarWriteRepository carWriteRepository;
 
-    @Autowired
-    private CarWriteRepository carWriteRepository;
+    public CarServiceImpl(CarReadRepository carReadRepository, CarWriteRepository carWriteRepository) {
+        this.carReadRepository = carReadRepository;
+        this.carWriteRepository = carWriteRepository;
+    }
 
     @Override
     public Car create(Car car) {

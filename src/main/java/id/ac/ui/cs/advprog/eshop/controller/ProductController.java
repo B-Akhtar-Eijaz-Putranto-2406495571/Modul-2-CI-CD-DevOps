@@ -1,12 +1,13 @@
 package id.ac.ui.cs.advprog.eshop.controller;
-import id.ac.ui.cs.advprog.eshop.model.Car;
 import id.ac.ui.cs.advprog.eshop.model.Product;
-import id.ac.ui.cs.advprog.eshop.service.CarServiceImpl;
+import id.ac.ui.cs.advprog.eshop.model.Car;
+import id.ac.ui.cs.advprog.eshop.service.CarReadService;
+import id.ac.ui.cs.advprog.eshop.service.CarWriteService;
 import id.ac.ui.cs.advprog.eshop.service.ProductService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 import java.util.UUID;

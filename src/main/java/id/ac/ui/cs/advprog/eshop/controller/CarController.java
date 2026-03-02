@@ -1,8 +1,8 @@
 package id.ac.ui.cs.advprog.eshop.controller;
+
 import id.ac.ui.cs.advprog.eshop.model.Car;
 import id.ac.ui.cs.advprog.eshop.service.CarReadService;
 import id.ac.ui.cs.advprog.eshop.service.CarWriteService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -12,12 +12,13 @@ import java.util.List;
 @Controller
 @RequestMapping("/car")
 public class CarController {
+    private final CarReadService carReadService;
+    private final CarWriteService carWriteService;
 
-    @Autowired
-    private CarReadService carReadService;
-
-    @Autowired
-    private CarWriteService carWriteService;
+    public CarController(CarReadService carReadService, CarWriteService carWriteService) {
+        this.carReadService = carReadService;
+        this.carWriteService = carWriteService;
+    }
 
     @GetMapping("/createCar")
     public String createCarPage(Model model) {

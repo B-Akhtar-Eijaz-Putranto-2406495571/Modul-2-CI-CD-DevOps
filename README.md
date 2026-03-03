@@ -38,3 +38,29 @@ yang bisa dilakukan salah satunya adalah inheritance, yaitu membuat sebuah paren
     - Untuk Continuous Deployment (CD): Saya telah menerapkan mekanisme auto-deploy menggunakan layanan PaaS (Koyeb) yang terhubung langsung dengan repositori GitHub. Dengan konfigurasi pull based, setiap perubahan yang berhasil lolos tahap CI dan dimerge ke branch utama akan secara otomatis dideteksi oleh Koyeb, dibangun ulang menggunakan ```Dockerfile```, dan di-deploy ke lingkungan produksi tanpa intervensi manual, sehingga aplikasi selalu dalam kondisi terbaru.
 
 </details>
+
+<details>
+<Summary><b>Refleksi 4</b></Summary>
+
+1. Implementasi SOLID Principle
+   - Single Responsibility Principle (SRP): Saya memisahkan CarController dari ProductController. Sebelumnya, CarController memiliki tanggung jawab double karena mengextend ProductController. Sekarang, CarController hanya menangani routing dan request HTTP yang berkaitan dengan Car, sedangkan logika ditangani oleh CarServiceImpl, dan penyimpanan data ditangani oleh repositori.
+   - Open/Closed Principle (OCP): Saya menerapkan prinsip ini dengan membuat interface untuk Service dan Repository (seperti CarReadService dan CarReadRepository). Kode sekarang terbuka untuk ekstensi, namun tertutup untuk modifikasi atau tidak perlu mengubah isi CarServiceImpl jika isinya mau diubah.
+   - Liskov Substitution Principle (LSP): Saya menghapus extend di bagian ```class CarController extends ProductController```. Selain itu, implementasi class seperti CarServiceImpl dan CarRepository sekarang dapat menggantikan interface mereka tanpa merusak program.
+   - Interface Segregation Principle (ISP): Saya membagi interface yang besar menjadi bagian-bagian yang lebih kecil dan spesifik. CarService dipecah menjadi CarReadService dan CarWriteService dan repositori dipecah menjadi CarReadRepository dan CarWriteRepository.
+   - Dependency Inversion Principle (DIP): Saya mengubah cara injeksi dependensi dari Field Injection (@Autowired pada concrete class) menjadi Constructor Injection yang bergantung pada interface. Sekarang, modul tingkat tinggi (CarController dan CarServiceImpl) bergantung pada abstraksi, bukan pada implementasi detail (modul tingkat rendah).
+
+2. Keuntungan penerapan SOLID Principle dalam projek
+   - Skalabilitas dan Ekstensibilitas yang Mudah (OCP & DIP)
+      - Karena CarServiceImpl sekarang bergantung pada CarReadRepository dan CarWriteRepository, saya dapat dengan mudah mengganti dari repositori yang memakai ArrayList ke penyimpanan database di masa depan. Saya hanya perlu membuat class baru yang mengimplementasikan antarmuka tersebut tanpa memodifikasi kode di dalam CarServiceImpl.
+   - Lebih mudah untuk dilakukan Unit Testing:
+      - Dengan menggunakan Constructor Injection (DIP), saya bisa melakukan Unit Test pada CarController dengan sangat mudah. Saya cukup memasukkan mock object dari CarReadService ke dalam konstruktor CarController tanpa harus menyalakan seluruh framework Spring Boot.
+
+3. Kekurangan tidak menerapkan SOLID Principle dalam projek
+   - Perilaku app yang sulit diprediksi 
+     - Sebelum diubah, CarController melakukan extends terhadap ProductController. Akibat extends ini, CarController secara tidak sengaja mewarisi semua endpoint URL milik produk. Hal ini bisa menyebabkan konflik routing yang aneh, di mana mengakses URL terkait mobil malah bisa memicu logika penghapusan atau pembuatan produk.
+   - Ketergantungan yang kaku 
+     - Saat CarController menggunakan @Autowired private CarServiceImpl carService;, kode menjadi sangat kaku. Jika sewaktu-waktu tim memutuskan untuk membuat versi layanan mobil khusus, saya harus memodifikasi langsung source code di dalam CarController. Ini melanggar prinsip Open-Closed Principle bagian tertutup untuk modifikasi dan adanya risiko untuk merusak kode yang sudah ada.
+   - Ketergantungan yang berlebihan 
+     - Jika kita mempunyai satu CarRepository besar, class lain yang hanya perlu mengambil data tetap harus menanggung beban dari metode write dan delete. Ini membuat pemahaman terhadap kode menjadi sulit dan setiap ada perubahan pada proses write, class tersebut yang hanya melakukan read terpaksa harus ikut dikompilasi ulang.
+   
+</details>
